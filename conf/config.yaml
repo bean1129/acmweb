@@ -1,0 +1,65 @@
+# MySQL 连接配置
+mysql:
+  host: '192.168.1.195'
+  port: 3306
+  database: 'test_db'
+  username: 'hkuser'
+  password: 'HkUser0610'
+  charset: 'utf8mb4'
+  debug: true
+  logLevel: debug
+  maxOpenCons: 800 # 最大打开连接数
+  maxIdleCons: 100 # 连接池的空闲数大小
+  timeout: '3s'
+  parseTime: true
+
+# Redis缓存
+Redis:
+  Network: "tcp"
+  Addr: "192.168.1.195:3245"
+  Timeout: 30
+  MaxActive: 10
+  Password: "CC1881db"
+  Database: ""
+  Prefix: ""
+  Delim: "-"
+
+# 文件上传
+attachment:
+  # 文件存储路径
+  file_path: '/acmsvr/run/files/'
+  # 上传文件最大值
+  file_size: 1000000000
+  # 允许上传文件后缀
+  file_ext: 'bmp,ico,psd,jpg,jpeg,png,gif,doc,docx,xls,xlsx,pdf,zip,rar,7z,tz,mp3,mp4,mov,swf,flv,avi,mpg,ogg,wav,flac,ape'
+
+
+# 系统配置
+application:
+  # 名称
+  name: "ACMWeb授权管控控制台"
+  # 版本号
+  version: "v2.0.0"
+  # 服务类型
+  model: 1  # 1-HTTP|2-TCP|3-WebSocket|0-NONE
+  # IP地址
+  #addr: 127.0.0.1
+  addr: 0.0.0.0
+  # 端口号
+  port: 9088
+  # 静态文件服务端口号
+  fileport: 9758
+  # 调试模式
+  debug: true
+  # 图片域名   7yt
+  image: "http://images.iris.elevue"
+  # 密钥
+  secret_key: "AC35748628"
+  # 服务编号
+  serv_id: 1
+  # Session过期时间
+  expire_time: 1000
+  # 日志级别
+  log_level: "INFO"
+  # 定时检测证书内容变动
+  check_time: 0
